@@ -1,2 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
 *,*::before,*::after{padding: 0; margin: 0; box-sizing: border-box;}
 html{font-size: 16px;}
+:root {
+    --success: #2ecc71;
+    --error: #e74c3c;
+    --text-color: #777;
+    --white: #fff;
+    --dark-text: #1c2042;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: var(--white);
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px var(--text-color);
+    padding: 2rem;
+}
+
+.container h2{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0.5rem;
+    letter-spacing: 8px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.form-control{
+    position: relative;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.form-control label{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+.form-control input{
+    padding: 0.4rem;
+    margin: 0.3rem 0 0 0;
+    font-size: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    border: 1px solid var(--dark-text);
+}
+.form-control.error input{
+    border-color: var(--error);
+}
+.form-control.success input{
+    border-color: var(--success);
+}
+.form-control small{
+    font-size: 0.7rem;
+    color: var(--error);
+    visibility: hidden;
+}
+.form-control.error small {
+    visibility: visible;
+}
+.form button{
+    width: 100%;
+    padding: 0.5rem 0;
+    background-color: var(--dark-text);
+    color: var(--white);
+    font-size: 1.3rem;
+    font-weight: 600;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+.form button:hover{
+    background-color: var(--success);
+    color: var(--dark-text);
+    transition: 0.5s;
+    letter-spacing: 6px;
+}
