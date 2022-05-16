@@ -83,5 +83,10 @@ body{
     background-color: var(--success);
     color: var(--dark-text);
     transition: 0.5s;
-    letter-spacing: 6px;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+-webkit-appearance: none;
 }
