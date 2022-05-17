@@ -84,6 +84,9 @@ body{
     letter-spacing: 15px;
     text-transform: uppercase;
 }
+.form-control #review{
+    height: 5rem;
+}
 
 /* <== removes toggle button from input elements ==> */
 
