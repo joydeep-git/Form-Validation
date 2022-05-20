@@ -23,7 +23,7 @@ const showSuccess = function(input){
 const checkRequired = function(inputArr){
     inputArr.forEach((input) => {
         if (input.value === '') {
-            showError(input, `${input} is required`);
+            showError(input, `${input.name} is required`);
         } else {
             showSuccess(input);
         }
