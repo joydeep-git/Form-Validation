@@ -8,6 +8,12 @@ const review = document.getElementById('review');
 
 const inputArr = [username, email, password, confirmpassword, number, review];
 
+
+const message = function(input){
+    let errorMessage = input.id.replace(/-p/, ' P');
+    return errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1)
+}
+
 const showError = function(input, message){
     const formControl = input.parentElement;
     formControl.classList = 'form-control error';
@@ -23,19 +29,43 @@ const showSuccess = function(input){
 const checkRequired = function(inputArr){
     inputArr.forEach((input) => {
         if (input.value === '') {
-            showError(input, `${input.name} is required`);
+            showError(input, `${message(input)} is required`);
         } else {
             showSuccess(input);
         }
     });
 };
 
+const checkLength =function(input, min, max){
+    if(input.value.trim().length < min){
+        showError(input, `${message(input)} has to be atleast ${min} characters`)
+    }else if(input.value.trim().length > max){
+        showError(input, `${message(input)} should not be more than ${max} characters`)
+    }else{
+        showSuccess(input)
+    }
+}
+
+const checkPassword = function(input1, input2){
+    if(input1.value.trim() !== '' && input2.value.trim() !== ''){
+        if(input1.value.trim() !== input2.value.trim()){
+            showError(input2, 'password not matched')
+        }else{
+            showSuccess(input2)
+        }
+    }
+}
+
 form.addEventListener('submit', (e) => {
     e.preventDefault();
-    checkRequired(inputArr)
+    checkRequired(inputArr);
+    checkLength(username, 4, 12);
+    checkLength(password, 7, 15);
+    checkLength(confirmpassword, 7, 15);
+    checkLength(number, 10, 10);
+    checkLength(review, 10, 300);
+    checkPassword(password, confirmpassword);
 });
-
-
 
 
 // <<<=== TIME CONSUMING METHOD  ===>>>
