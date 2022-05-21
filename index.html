@@ -1,61 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Validation</title>
-    <link rel="stylesheet" href="/CSS/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="/CSS/style.css" />
+  </head>
+  <body>
     <div class="container">
-        
-        <h2>Create Account</h2>
+      <h2>Create Account</h2>
 
-        <form action="#" class="form" id="form">
-            <div class="form-control">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username" placeholder="Enter username"/>
-                <small></small>
-            </div>
-            
-            <div class="form-control">
-                <label for="email">email</label>
-                <input type="email" name="email" id="email" placeholder="Enter email"/>
-                <small></small>
-            </div>
+      <form action="#" class="form" id="form">
+        <div class="form-control">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            placeholder="Enter username"
+          />
+          <small></small>
+        </div>
 
-            <div class="form-control">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" 
-                placeholder="Enter password"/>
-                <small></small>
-            </div>
+        <div class="form-control">
+          <label for="email">email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter email"
+          />
+          <small></small>
+        </div>
 
-            <div class="form-control">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" 
-                placeholder="Enter password"/>
-                <small></small>
-            </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Enter password"
+          />
+          <small></small>
+        </div>
 
-            <div class="form-control">
-                <label for="number">Number</label>
-                <input type="number" name="number" id="number"
-                placeholder="Enter Phone Number"/>
-                <small></small>
-            </div>
+        <div class="form-control">
+          <label for="confirm-password">Confirm Password</label>
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder="Enter password"
+          />
+          <small></small>
+        </div>
 
-            <div class="form-control">
-                <label for="review">Message</label>
-                <input type="text" name="review" id="review" 
-                placeholder="Write your thoughts here"/>
-                <small></small>
-            </div>
+        <div class="form-control">
+          <label for="number">Number</label>
+          <input
+            type="number"
+            name="number"
+            id="number"
+            placeholder="Enter Phone Number"
+          />
+          <small></small>
+        </div>
 
-            <button type="submit">submit</button>
-        </form>
+        <div class="form-control">
+          <label for="review">Message</label>
+          <input
+            type="text"
+            name="review"
+            id="review"
+            placeholder="Write your thoughts here"
+          />
+          <small></small>
+        </div>
+
+        <div class="button">
+          <button type="submit">submit</button>
+          <button type="reset">reset</button>
+        </div>
+      </form>
     </div>
     <script src="/JS/app.js"></script>
-</body>
+  </body>
 </html>
