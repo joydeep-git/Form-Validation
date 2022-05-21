@@ -59,9 +59,11 @@ body{
     border-color: var(--success);
 }
 .form-control small{
+    content: ;
     font-size: 0.7rem;
     color: var(--error);
     visibility: hidden;
+    height: 0.8rem;
 }
 .form-control.error small {
     visibility: visible;
