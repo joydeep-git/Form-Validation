@@ -35,6 +35,11 @@ form.addEventListener('submit', (e) => {
     checkRequired(inputArr)
 });
 
+
+
+
+// <<<=== TIME CONSUMING METHOD  ===>>>
+
 // form.addEventListener('submit', function(e){
 //     e.preventDefault();
 
