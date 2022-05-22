@@ -13,4 +13,4 @@ v) redesigned showError message
 
 vi) added email checker
 
-vii) 
+vii) added live count (taken help from WEB)
