@@ -9,6 +9,14 @@ const review = document.getElementById('review');
 const inputArr = [username, email, password, confirmpassword, number, review];
 
 
+const checkEmail = function(input){
+    const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+
+    if(re.test(String(input.value).toLocaleLowerCase().trim())){
+        showSuccess(input)
+    }else{showError(input, 'Email is not valid')}
+}
+
 const message = function(input){
     let errorMessage = input.id.replace(/-p/, ' P');
     return errorMessage.charAt(0).toUpperCase() + errorMessage.slice(1)
@@ -65,8 +73,8 @@ form.addEventListener('submit', (e) => {
     checkLength(number, 10, 10);
     checkLength(review, 10, 300);
     checkPassword(password, confirmpassword);
+    checkEmail(email);
 });
-
 
 // <<<=== TIME CONSUMING METHOD  ===>>>
 

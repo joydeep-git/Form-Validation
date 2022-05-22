@@ -97,6 +97,10 @@ body{
     height: 3rem;
 }
 
+.form-control input:hover{
+    border-color: black;
+}
+
 /* <== removes toggle button from input elements ==> */
 
 input::-webkit-outer-spin-button,
