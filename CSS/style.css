@@ -101,6 +101,13 @@ body{
     border-color: black;
 }
 
+#count{
+    color: var(--success);
+    font-weight: 600;
+    font-size: 1rem;
+    visibility: visible;
+}
+
 /* <== removes toggle button from input elements ==> */
 
 input::-webkit-outer-spin-button,

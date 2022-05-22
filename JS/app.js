@@ -54,6 +54,11 @@ const checkLength =function(input, min, max){
     }
 }
 
+review.addEventListener("input", () => {
+    let count = (review.value).length;
+    document.getElementById("count").textContent = `Total characters: ${count}`;
+});
+
 const checkPassword = function(input1, input2){
     if(input1.value.trim() !== '' && input2.value.trim() !== ''){
         if(input1.value.trim() !== input2.value.trim()){
